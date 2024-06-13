@@ -18,6 +18,8 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+    "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
 )
 
 CHECKPOINT_MODELS=(
