@@ -9,6 +9,7 @@
 PYTHON_PACKAGES=(
     #"opencv-python==4.7.0.72"
     #"Pillow==9.0.0"
+    "onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/"
 )
 
 NODES=(
@@ -29,7 +30,7 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/397998"
+    "https://huggingface.co/FISHFISH33/sparkle_lora/resolve/main/sparkle-str-v2c.safetensors?download=true"
     "https://civitai.com/api/download/models/379731"
 )
 
