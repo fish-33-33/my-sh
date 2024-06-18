@@ -21,6 +21,11 @@ NODES=(
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/Fannovel16/ComfyUI-Frame-Interpolation"
+    "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/FizzleDorf/ComfyUI_FizzNodes"
+    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/mav-rik/facerestore_cf"
 )
 
 CHECKPOINT_MODELS=(
@@ -32,6 +37,7 @@ CHECKPOINT_MODELS=(
 LORA_MODELS=(
     "https://huggingface.co/FISHFISH33/sparkle_lora/resolve/main/sparkle-str-v2c.safetensors?download=true"
     "https://civitai.com/api/download/models/379731"
+    "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt?download=true"
 )
 
 VAE_MODELS=(
@@ -43,18 +49,21 @@ ESRGAN_MODELS=(
     "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
     "https://huggingface.co/Shandypur/ESRGAN-4x-UltraSharp/resolve/main/4x-UltraSharp.pth?download=true"
+    "https://huggingface.co/dtarnow/UPscaler/resolve/main/RealESRGAN_x2plus.pth?download=true"
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.pth?download=true"
-    "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.yaml?download=true"
-    "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.pth?download=true"
-    "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.yaml?download=true"
+    #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.pth?download=true"
+    #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.yaml?download=true"
+    #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.pth?download=true"
+    #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.yaml?download=true"
     "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.pth?download=true"
     "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.yaml?download=true"
-    "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.pth?download=true"
-    "https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.yaml?download=true"
+    #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.pth?download=true"
+    #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.yaml?download=true"
     "https://huggingface.co/hr16/ControlNet-HandRefiner-pruned/resolve/main/control_sd15_inpaint_depth_hand_fp16.safetensors?download=true"
+    "https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd15_mediapipe_face.safetensors?download=true"
+    "https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd21_mediapipe_face.yaml?download=true"
 )
 
 ANIMATEDIFF_MODELS=(
@@ -65,6 +74,12 @@ EMBEDDINGS=(
     "https://civitai.com/api/download/models/9208"
     "https://civitai.com/api/download/models/20068"
 )
+
+
+FACERESTORE_MODELS=(
+    "https://huggingface.co/gmk123/GFPGAN/resolve/main/GFPGANv1.4.pth?download=true"
+)
+
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
@@ -96,6 +111,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/embeddings" \
         "${EMBEDDINGS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/facerestore_models" \
+        "${FACERESTORE_MODELS[@]}"
     provisioning_print_end
 }
 
