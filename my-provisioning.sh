@@ -32,12 +32,16 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/201698"
     "https://civitai.com/api/download/models/265102"
     "https://civitai.com/api/download/models/30163"
+    #rabbit
+    "https://civitai.com/api/download/models/179525"
 )
 
 LORA_MODELS=(
     "https://huggingface.co/FISHFISH33/sparkle_lora/resolve/main/sparkle-str-v2c.safetensors?download=true"
     "https://civitai.com/api/download/models/379731"
     "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt?download=true"
+    #sigewinne
+    "https://civitai.com/api/download/models/538633"
 )
 
 VAE_MODELS=(
@@ -80,6 +84,16 @@ FACERESTORE_MODELS=(
     "https://huggingface.co/gmk123/GFPGAN/resolve/main/GFPGANv1.4.pth?download=true"
 )
 
+CLIP_VISION=(
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
+    #rename to 
+)
+
+IPADAPTER=(
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15_light_v11.bin"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sd15.bin"
+)
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
@@ -114,6 +128,12 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/facerestore_models" \
         "${FACERESTORE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/clip_vision" \
+        "${CLIP_VISION[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/ipadapter" \
+        "${IPADAPTER[@]}"       
     provisioning_print_end
 }
 
