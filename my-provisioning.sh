@@ -34,6 +34,8 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/30163"
     #rabbit
     "https://civitai.com/api/download/models/179525"
+    #meinamix
+    "https://civitai.com/api/download/models/119057"
 )
 
 LORA_MODELS=(
@@ -86,7 +88,7 @@ FACERESTORE_MODELS=(
 
 CLIP_VISION=(
     "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
-    #rename to 
+    #rename to CLIP-ViT-H-14-laion2B-s32B-b79K
 )
 
 IPADAPTER=(
