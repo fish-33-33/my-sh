@@ -39,11 +39,14 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
+    #hanabi
     "https://huggingface.co/FISHFISH33/sparkle_lora/resolve/main/sparkle-str-v2c.safetensors?download=true"
     "https://civitai.com/api/download/models/379731"
     "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt?download=true"
     #sigewinne
     "https://civitai.com/api/download/models/538633"
+    #hotaru
+    "https://huggingface.co/FISHFISH33/hotaru-lora/resolve/main/fireflysd15.safetensors?download=true"
 )
 
 VAE_MODELS=(
