@@ -29,9 +29,10 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
+    #feathermix
     "https://civitai.com/api/download/models/201698"
-    "https://civitai.com/api/download/models/265102"
-    "https://civitai.com/api/download/models/30163"
+    #"https://civitai.com/api/download/models/265102"
+    #"https://civitai.com/api/download/models/30163"
     #rabbit
     "https://civitai.com/api/download/models/179525"
     #meinamix
@@ -40,13 +41,16 @@ CHECKPOINT_MODELS=(
 
 LORA_MODELS=(
     #hanabi
-    "https://huggingface.co/FISHFISH33/sparkle_lora/resolve/main/sparkle-str-v2c.safetensors?download=true"
-    "https://civitai.com/api/download/models/379731"
-    "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt?download=true"
+    #"https://huggingface.co/FISHFISH33/sparkle_lora/resolve/main/sparkle-str-v2c.safetensors?download=true"
+    #"https://civitai.com/api/download/models/379731"
+    #"https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt?download=true"
     #sigewinne
-    "https://civitai.com/api/download/models/538633"
+    #"https://civitai.com/api/download/models/538633"
     #hotaru
-    "https://huggingface.co/FISHFISH33/hotaru-lora/resolve/main/fireflysd15.safetensors?download=true"
+    #"https://huggingface.co/FISHFISH33/hotaru-lora/resolve/main/fireflysd15.safetensors?download=true"
+    #ayaka
+    "https://huggingface.co/FISHFISH33/ayakalora/resolve/main/kamisato%20ayaka.safetensors?download=true"
+
 )
 
 VAE_MODELS=(
@@ -71,8 +75,8 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.pth?download=true"
     #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.yaml?download=true"
     "https://huggingface.co/hr16/ControlNet-HandRefiner-pruned/resolve/main/control_sd15_inpaint_depth_hand_fp16.safetensors?download=true"
-    "https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd15_mediapipe_face.safetensors?download=true"
-    "https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd21_mediapipe_face.yaml?download=true"
+    #"https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd15_mediapipe_face.safetensors?download=true"
+    #"https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd21_mediapipe_face.yaml?download=true"
 )
 
 ANIMATEDIFF_MODELS=(
